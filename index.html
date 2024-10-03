@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Image Slider</title>
+    <style>
+        .slider {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Слайдер изображений</h1>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="https://placehold.co/500x300?text=Slide+1" alt="Slide 1"></div>
+        <div class="slide"><img src="https://placehold.co/500x300?text=Slide+2" alt="Slide 2"></div>
+        <div class="slide"><img src="https://placehold.co/500x300?text=Slide+3" alt="Slide 3"></div>
+    </div>
+    <div class="controls">
+        <button class="control" id="prevBtn">&lt;</button>
+        <button class="control" id="nextBtn">&gt;</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
